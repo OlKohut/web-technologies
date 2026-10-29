@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лаб. 6 — Завдання 4: горизонтальна навігація (fixed)</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page--with-fixed-top">
+
+    <!-- position: fixed — панель завжди вгорі вікна -->
+    <nav class="hnav hnav--fixed">
+        <ul class="hnav__list">
+            <li class="hnav__item hnav__item--active">
+                <a class="hnav__link" href="#" title="Головна"><span class="material-icons">home</span></a>
+                <ul class="hnav__sub">
+                    <li><a href="#">Новини</a></li>
+                    <li><a href="#">Події</a></li>
+                    <li class="has-sub">
+                        <a href="#">Проєкти</a>
+                        <ul class="hnav__sub hnav__sub--side">
+                            <li><a href="#">Поточні</a></li>
+                            <li><a href="#">Архів</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="hnav__item">
+                <a class="hnav__link" href="#" title="Пошук"><span class="material-icons">search</span></a>
+                <ul class="hnav__sub">
+                    <li><a href="#">Простий пошук</a></li>
+                    <li><a href="#">Розширений пошук</a></li>
+                </ul>
+            </li>
+            <!-- останній пункт — праворуч через float -->
+            <li class="hnav__item hnav__item--right">
+                <a class="hnav__link" href="#" title="Пошта"><span class="material-icons">mail</span></a>
+                <ul class="hnav__sub hnav__sub--right">
+                    <li><a href="#">Вхідні</a></li>
+                    <li><a href="#">Надіслані</a></li>
+                    <li><a href="#">Чернетки</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Фіксована горизонтальна навігація</h1>
+        <p>Прокрутіть сторінку — панель залишається вгорі. Наведіть курсор на піктограми, щоб побачити випадні меню.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="filler">Текст-заповнювач для прокручування. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p><a href="horizontal-sticky.html">Sticky-версія →</a> · <a href="vertical.html">Вертикальна навігація →</a></p>
+    </main>
+</body>
+</html>

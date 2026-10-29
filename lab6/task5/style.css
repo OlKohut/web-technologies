@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+/* сцена із сірим градієнтним фоном */
+.scene {
+    position: relative;
+    width: 520px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: linear-gradient(to right, #a9a9a9, #d4d4d4);
+}
+
+/* чорна картка з тінню */
+.card {
+    position: absolute;
+    top: 18px;
+    left: 82px;
+    width: 280px;
+    height: 330px;
+    background-color: #000;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* ---------- Хмара ---------- */
+.cloud {
+    position: absolute;
+    top: 70px;
+    left: 140px;
+    width: 340px;
+    height: 170px;
+    z-index: 2;                /* над карткою */
+    opacity: 0.95;
+}
+
+.cloud-part {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 25px 12px rgba(255, 255, 255, 0.85);   /* м'які краї */
+}
+.cloud-part-1 { top: 60px; left: 10px;  width: 90px;  height: 40px; opacity: 0.8; }
+.cloud-part-2 { top: 20px; left: 70px;  width: 110px; height: 70px; }
+.cloud-part-3 { top: 5px;  left: 150px; width: 110px; height: 80px; }
+.cloud-part-4 { top: 50px; left: 190px; width: 120px; height: 70px; opacity: 0.9; }
+.cloud-part-5 { top: 70px; left: 90px;  width: 160px; height: 50px; opacity: 0.85; }
+
+/* ---------- Стрілки ---------- */
+.arrows {
+    position: absolute;
+    top: 108px;
+    left: 24px;
+    display: flex;
+    background-color: rgba(120, 120, 120, 0.45);
+    border: 1px solid rgba(90, 90, 90, 0.5);
+    z-index: 4;
+}
+
+.arrow {
+    display: block;
+    width: 56px;
+    height: 56px;
+    line-height: 54px;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 100;
+    color: #222;
+    cursor: pointer;
+}
+.arrow-right { background-color: rgba(90, 90, 90, 0.45); }
+.arrow:hover { background-color: rgba(60, 60, 60, 0.6); color: #fff; }
+
+/* ---------- Температура ---------- */
+.temp-now {
+    position: absolute;
+    left: 98px;
+    bottom: 100px;
+    font-size: 84px;
+    font-weight: 700;
+    color: #9a9a9a;
+    z-index: 3;
+}
+
+/* ---------- Прогноз ---------- */
+.forecast {
+    position: absolute;
+    right: 18px;
+    bottom: 22px;
+    display: flex;
+    margin: 0;
+    padding: 18px 14px 14px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.35);
+    z-index: 5;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    cursor: default;
+}
+
+.day { font-size: 12px; color: #bdbdbd; }
+.deg { margin-top: 6px; font-size: 18px; color: #333; }
+
+/* додатково: прозорість змінюється при наведенні */
+.forecast-day { opacity: 0.8; transition: opacity 0.2s; }
+.forecast-day:hover { opacity: 1; }
+.forecast-day:hover .day { color: #666; }

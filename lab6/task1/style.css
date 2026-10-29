@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+/* батьківський контейнер - точка відліку для absolute-блоків */
+.layout {
+    position: relative;
+    width: 765px;
+    height: 290px;
+    margin: 0 auto;
+}
+
+.block {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;      /* текст по центру по вертикалі */
+    justify-content: center;  /* і по горизонталі */
+    font-size: 24px;
+    border: 2px solid #1a1a1a;
+}
+
+/* світло-блакитні блоки (нижній шар) */
+.block-light {
+    top: 60px;
+    width: 365px;
+    height: 178px;
+    background-color: #a0cbdc;
+    color: #1f2d3d;
+    z-index: 1;
+}
+
+.block-left  { left: 0; }
+.block-right { right: 0; }   /* між блоками лишається білий проміжок */
+
+/* темно-сині блоки (верхній шар) */
+.block-dark {
+    left: 50%;
+    margin-left: -215px;      /* центрування абсолютного блоку */
+    width: 430px;
+    height: 78px;
+    background-color: #2e6fbf;
+    color: #fff;
+    z-index: 2;
+}
+
+.block-top    { top: 0; }
+.block-bottom { top: 212px; }

@@ -1,0 +1,180 @@
+/* ================== Загальне ================== */
+* { box-sizing: border-box; }
+
+.page {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+}
+
+.page--with-fixed-top { padding-top: 64px; }   /* місце під fixed-панель */
+.page--with-sidebar   { padding-left: 240px; } /* місце під вертикальну панель */
+
+.content { padding: 24px 32px; max-width: 800px; }
+.filler  { margin: 0 0 120px; }
+
+.banner {
+    height: 160px;
+    padding: 24px 32px;
+    background: #d9e6f5;
+    font-size: 24px;
+}
+
+/* списки без маркерів, посилання - блоками */
+.hnav__list, .hnav__sub, .vnav__list, .vnav__sub {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.hnav a, .vnav a { text-decoration: none; }
+
+/* очищення float */
+.hnav__list:after { content: ''; display: block; clear: both; }
+
+/* ================== Горизонтальна навігація ================== */
+.hnav {
+    background-color: #555;
+    z-index: 100;
+}
+
+.hnav--fixed {
+    position: fixed;       /* прив'язка до вікна */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hnav--sticky {
+    position: sticky;      /* прилипає при прокручуванні */
+    top: 0;
+}
+
+.hnav__item {
+    position: relative;    /* точка відліку для випадного меню */
+    float: left;
+}
+
+/* останній пункт - праворуч (float) */
+.hnav__item--right { float: right; }
+
+.hnav__link {
+    display: block;
+    width: 96px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    transition: background-color 0.2s;
+}
+.hnav__link .material-icons { line-height: 56px; font-size: 30px; vertical-align: middle; }
+
+.hnav__item:hover > .hnav__link,
+.hnav__item:focus-within > .hnav__link { background-color: #7d7d7d; }
+
+/* активний (поточний) пункт */
+.hnav__item--active > .hnav__link,
+.hnav__item--active:hover > .hnav__link { background-color: #6ab04c; }
+
+/* випадні меню */
+.hnav__sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background-color: #444;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 110;
+}
+.hnav__sub--right { left: auto; right: 0; }       /* щоб меню не вилазило за край */
+
+.hnav__sub li { position: relative; }
+.hnav__sub a {
+    display: block;
+    padding: 12px 18px;
+    color: #fff;
+    white-space: nowrap;
+}
+.hnav__sub a:hover,
+.hnav__sub a:focus { background-color: #6ab04c; }
+
+/* третій рівень - збоку */
+.hnav__sub--side { top: 0; left: 100%; }
+.hnav__sub .has-sub > a:after { content: '\25B8'; float: right; margin-left: 16px; }
+
+.hnav__item:hover > .hnav__sub,
+.hnav__item:focus-within > .hnav__sub,
+.hnav__sub li:hover > .hnav__sub,
+.hnav__sub li:focus-within > .hnav__sub {
+    visibility: visible;
+    opacity: 1;
+}
+/* праве меню відкриває 3-й рівень ліворуч, якщо буде потреба */
+.hnav__sub--right .hnav__sub--side { left: auto; right: 100%; }
+
+/* ================== Вертикальна навігація ================== */
+.vnav {
+    position: fixed;       /* фіксована, повна висота */
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #2d6fba;
+    z-index: 100;
+}
+
+.vnav__item,
+.vnav__sub li { position: relative; }
+
+.vnav__link {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+    transition: background-color 0.2s;
+}
+.vnav__link .material-icons { margin-right: 16px; font-size: 26px; }
+
+.vnav__item:hover > .vnav__link,
+.vnav__item:focus-within > .vnav__link { background-color: #4d8bd2; }
+
+.vnav__item--active > .vnav__link,
+.vnav__item--active:hover > .vnav__link { background-color: #1b4f8f; }
+
+/* підменю - праворуч від панелі */
+.vnav__sub {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    background-color: #1f5a9e;
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.vnav__sub a {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    white-space: nowrap;
+}
+.vnav__sub a:hover,
+.vnav__sub a:focus { background-color: #4d8bd2; }
+.vnav .has-sub > a:after,
+.vnav__item.has-sub > .vnav__link:after { content: '\25B8'; margin-left: auto; }
+
+.vnav__item:hover > .vnav__sub,
+.vnav__item:focus-within > .vnav__sub,
+.vnav__sub li:hover > .vnav__sub,
+.vnav__sub li:focus-within > .vnav__sub {
+    visibility: visible;
+    opacity: 1;
+}
+.vnav__sub li.has-sub > a { display: flex; justify-content: space-between; }
