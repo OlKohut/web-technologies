@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.wrapper {
+    position: relative;
+    width: 680px;
+    height: 260px;
+    margin: 50px auto;
+}
+
+.block {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #222;
+}
+
+.green {
+    background-color: #4caf60;
+}
+
+.blue {
+    background-color: #6590d4;
+    color: white;
+    /* блоки 2.x спочатку невидимі, але місце за ними збережене */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+}
+
+.green {
+    cursor: pointer;
+}
+
+/* розміри і положення */
+.block-1-1 { left: 0;     top: 0;     width: 200px; height: 50px; }
+.block-2-1 { left: 0;     top: 70px;  width: 200px; height: 190px; }
+.block-2-2 { left: 215px; top: 0;     width: 465px; height: 170px; }
+.block-1-2 { left: 215px; top: 215px; width: 465px; height: 45px; }
+
+/* комбінатор сусіднього елемента: наведення (або фокус) на 1.x показує 2.x */
+.block-1-1:hover + .block-2-1,
+.block-1-1:focus + .block-2-1,
+.block-1-2:hover + .block-2-2,
+.block-1-2:focus + .block-2-2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.green:hover {
+    background-color: #3d9650;
+}
+
+.green:focus {
+    outline: 3px dashed #ffd166;
+}

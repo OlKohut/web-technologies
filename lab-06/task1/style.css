@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* батько для absolute-блоків */
+.wrapper {
+    position: relative;
+    width: 720px;
+    height: 245px;
+    margin: 50px auto;
+}
+
+.block {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 3px solid #222;
+}
+
+/* два світлі блоки */
+.block-left,
+.block-right {
+    top: 45px;
+    width: 335px;
+    height: 165px;
+    background-color: #a2cbdb;
+    z-index: 1;
+}
+
+.block-left {
+    left: 0;
+}
+
+.block-right {
+    right: 0;
+}
+
+/* два темно-сині блоки поверх */
+.block-top,
+.block-bottom {
+    left: 175px;
+    width: 370px;
+    height: 55px;
+    background-color: #2e6cb8;
+    color: white;
+    z-index: 2;
+}
+
+.block-top {
+    top: 0;
+}
+
+.block-bottom {
+    top: 190px;
+}
