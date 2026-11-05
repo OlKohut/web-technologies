@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="weather">
+    <h1 class="city">New York, NY</h1>
+    <p class="date">Tuesday, April 15th</p>
+    <p class="status">Overcast</p>
+
+    <section class="current">
+      <div class="current__main">
+        <img class="current__icon" src="icons/iconfinder_weather04.png" alt="Overcast" width="120" height="120">
+        <p class="current__temp">58<span>°F</span></p>
+      </div>
+      <ul class="details">
+        <li>Precipitation: 100%</li>
+        <li>Humidity: 97%</li>
+        <li>Wind: 4 mph SW</li>
+        <li>Pollen Count: 36</li>
+      </ul>
+    </section>
+
+    <ul class="forecast">
+      <li class="forecast__item">
+        <span class="forecast__day">Today</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather07.png" alt="Thunderstorm" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">68°</span>
+          <span class="min">36°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Wednesday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather01.png" alt="Sunny" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">50°</span>
+          <span class="min">39°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Thursday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather01.png" alt="Sunny" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">55°</span>
+          <span class="min">39°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Friday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather02.png" alt="Partly cloudy" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">54°</span>
+          <span class="min">43°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Saturday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather05.png" alt="Light rain" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">64°</span>
+          <span class="min">46°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Sunday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather06.png" alt="Rain" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">64°</span>
+          <span class="min">50°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+      <li class="forecast__item">
+        <span class="forecast__day">Monday</span>
+        <div class="forecast__icon">
+          <img src="icons/iconfinder_weather03.png" alt="Partly cloudy" width="80" height="80">
+        </div>
+        <div class="forecast__temp">
+          <span class="max">61°</span>
+          <span class="min">50°</span>
+        </div>
+        <span class="forecast__pollen">Pollen <b>36</b></span>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
