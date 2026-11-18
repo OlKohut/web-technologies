@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторна 6 — Завдання 6. Попап</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <a class="header-link" href="#">Mail</a>
+        <a class="header-link" href="#">Images</a>
+
+        <!-- Попап: стан перемикається прихованим checkbox (без JS) -->
+        <div class="popup-wrap">
+            <!-- checkbox лежить поверх кнопки: невидимий, але фокусований (opacity: 0) -->
+            <input class="popup-toggle" type="checkbox" id="popup-toggle" aria-label="Відкрити меню застосунків">
+            <label class="popup-button" for="popup-toggle"><span class="dots"></span></label>
+
+            <div class="popup">
+                <!-- перемикач "More" (стоїть ПЕРЕД контентом, щоб працювали ~ і +) -->
+                <input class="more-toggle" type="checkbox" id="more-toggle" aria-label="Показати більше">
+
+                <!-- tabindex="0": прокручуваний контейнер можна гортати стрілками з клавіатури -->
+                <div class="popup-scroll" tabindex="0">
+                    <div class="popup-grid">
+                        <a class="popup-item" href="#"><span class="icon icon-calendar">📅</span><span class="name">Calendar</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-mail">✉️</span><span class="name">Mail</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-news">📰</span><span class="name">News</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-map">📍</span><span class="name">Map</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-files">📁</span><span class="name">Files</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-contacts">👤</span><span class="name">Contacts</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-translate">🌐</span><span class="name">Translate</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-videos">▶️</span><span class="name">Videos</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-search">🔎</span><span class="name">Search</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-photos">🖼️</span><span class="name">Photos</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-apps">🎨</span><span class="name">Apps</span></a>
+                        <a class="popup-item" href="#"><span class="icon icon-docs">📄</span><span class="name">Documents</span></a>
+                    </div>
+
+                    <!-- додаткові іконки: з'являються після натискання "More" -->
+                    <div class="popup-extra">
+                        <div class="popup-grid">
+                            <a class="popup-item" href="#"><span class="icon icon-chat">💬</span><span class="name">Chat</span></a>
+                            <a class="popup-item" href="#"><span class="icon icon-class">🎓</span><span class="name">Classroom</span></a>
+                            <a class="popup-item" href="#"><span class="icon icon-collection">⭐</span><span class="name">Collection</span></a>
+                            <a class="popup-item" href="#"><span class="icon icon-mars">🔴</span><span class="name">Mars</span></a>
+                            <a class="popup-item" href="#"><span class="icon icon-blogs">📝</span><span class="name">Blogs</span></a>
+                            <a class="popup-item" href="#"><span class="icon icon-promos">📢</span><span class="name">Promos</span></a>
+                        </div>
+                        <a class="popup-more-link" href="#">Even more from Kottans</a>
+                    </div>
+                </div>
+
+                <div class="popup-footer">
+                    <span class="more-label">More</span>
+                </div>
+            </div>
+        </div>
+
+        <a class="header-icon bell" href="#" aria-label="Сповіщення">🔔</a>
+        <a class="header-icon avatar" href="#" aria-label="Профіль"></a>
+    </header>
+
+</body>
+</html>

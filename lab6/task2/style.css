@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+.layout {
+    position: relative;
+    width: 620px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.block {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #2d5a2d;
+    font-size: 18px;
+}
+
+/* зелені блоки-тригери */
+.block-green {
+    background-color: #4caf5a;
+    color: #10300f;
+    cursor: pointer;
+}
+
+/* сині блоки, що з'являються (не display: none, щоб не руйнувати розмітку) */
+.block-blue {
+    background-color: #5f8bd3;
+    border-color: #3a5f9e;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.block-1-1 { top: 0;     left: 0;     width: 195px; height: 60px; }
+.block-2-1 { top: 75px;  left: 0;     width: 195px; height: 185px; }
+.block-2-2 { top: 0;     left: 210px; width: 410px; height: 170px; }
+.block-1-2 { top: 200px; left: 210px; width: 410px; height: 60px; }
+
+/* наведення на 1-1 -> з'являється 2-1; наведення на 1-2 -> з'являється 2-2 */
+.block-1-1:hover + .block-2-1,
+.block-1-2:hover + .block-2-2 {
+    opacity: 1;
+    visibility: visible;
+}

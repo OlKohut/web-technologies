@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лаб. 6 — Завдання 4: вертикальна навігація</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page--with-sidebar">
+
+    <!-- повна висота, position: fixed; три рівні вкладеності -->
+    <nav class="vnav">
+        <ul class="vnav__list">
+            <li class="vnav__item vnav__item--active">
+                <a class="vnav__link" href="#"><span class="material-icons">home</span><span class="vnav__text">Home</span></a>
+            </li>
+            <li class="vnav__item has-sub">
+                <a class="vnav__link" href="#"><span class="material-icons">article</span><span class="vnav__text">About</span></a>
+                <ul class="vnav__sub">
+                    <li class="has-sub">
+                        <a href="#">Компанія</a>
+                        <ul class="vnav__sub">
+                            <li><a href="#">Історія</a></li>
+                            <li><a href="#">Команда</a></li>
+                            <li><a href="#">Вакансії</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Місія</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </li>
+            <li class="vnav__item has-sub">
+                <a class="vnav__link" href="#"><span class="material-icons">free_breakfast</span><span class="vnav__text">Work With Me</span></a>
+                <ul class="vnav__sub">
+                    <li class="has-sub">
+                        <a href="#">Послуги</a>
+                        <ul class="vnav__sub">
+                            <li><a href="#">Веб-дизайн</a></li>
+                            <li><a href="#">Верстання</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Портфоліо</a></li>
+                </ul>
+            </li>
+            <li class="vnav__item">
+                <a class="vnav__link" href="#"><span class="material-icons">mail</span><span class="vnav__text">Contacts</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Вертикальна навігація</h1>
+        <p>Панель зафіксована на всю висоту вікна. Підменю відкриваються праворуч (3 рівні).</p>
+        <p><a href="horizontal-fixed.html">← Горизонтальна навігація</a></p>
+    </main>
+</body>
+</html>
