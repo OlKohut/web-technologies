@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* повна висота, фіксована зліва */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #2e6cb8;
+    z-index: 100;
+}
+
+.menu,
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative; /* батько для вкладеного меню */
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #a9c8ee;
+}
+
+.menu-item:hover > .menu-link,
+.menu-link:focus {
+    background-color: #1f5aa3;
+    outline: none;
+}
+
+/* активний пункт */
+.menu-item.active > .menu-link {
+    background-color: #17457f;
+}
+
+/* стрілка біля пунктів з підменю */
+.has-sub > .menu-link:after {
+    content: '▸';
+    margin-left: auto;
+}
+
+/* ---------- підменю (2-й і 3-й рівні) ---------- */
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: #3b7ccc;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.menu-item:hover > .submenu,
+.menu-item:focus-within > .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+}

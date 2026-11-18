@@ -1,0 +1,25 @@
+/* Mobile-first: способ 1 — колонки + рядки (grid-template-columns/rows + grid-column/grid-row) */
+
+/* Mobile (за замовчуванням): одна колонка, порядок = порядок у HTML */
+.layout { grid-template-columns: 1fr; }
+
+/* Tablet */
+@media (min-width: 576px) {
+  .layout { grid-template-columns: 1fr 3fr; grid-template-rows: auto auto 1fr auto; }
+  .header, .nav { grid-column: 1 / -1; }
+  .sidebar { grid-column: 1; grid-row: 3; }
+  .main    { grid-column: 2; grid-row: 3; }
+  .ads     { grid-column: 1; grid-row: 4; }
+  .footer  { grid-column: 2; grid-row: 4; }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .layout { grid-template-columns: 1fr 4fr 1fr; }
+  .header  { grid-column: 1 / -1; grid-row: 1; }
+  .sidebar { grid-column: 1;      grid-row: 2 / 4; }
+  .nav     { grid-column: 2;      grid-row: 2; }
+  .main    { grid-column: 2;      grid-row: 3; }
+  .ads     { grid-column: 3;      grid-row: 2 / 4; }
+  .footer  { grid-column: 1 / -1; grid-row: 4; }
+}

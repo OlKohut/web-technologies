@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 6 — Завдання 4 (вертикальна панель)</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vertical.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul class="menu">
+            <li class="menu-item active">
+                <a class="menu-link" href="#"><span class="material-icons">home</span>Home</a>
+            </li>
+
+            <li class="menu-item has-sub">
+                <a class="menu-link" href="#"><span class="material-icons">article</span>About</a>
+                <ul class="submenu">
+                    <li class="menu-item"><a class="menu-link" href="#">Історія</a></li>
+                    <li class="menu-item has-sub">
+                        <a class="menu-link" href="#">Команда</a>
+                        <!-- третій рівень -->
+                        <ul class="submenu">
+                            <li class="menu-item"><a class="menu-link" href="#">Розробники</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Дизайнери</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Тестувальники</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu-item has-sub">
+                <a class="menu-link" href="#"><span class="material-icons">coffee</span>Work With Me</a>
+                <ul class="submenu">
+                    <li class="menu-item"><a class="menu-link" href="#">Послуги</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Ціни</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Вертикальна панель навігації</h1>
+        <p>Панель зафіксована зліва на всю висоту вікна (position: fixed; height: 100%). Наведіть курсор на пункти, щоб побачити три рівні вкладеності.</p>
+    </main>
+</body>
+</html>
