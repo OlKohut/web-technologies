@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Poppins, Arial, sans-serif; background: #fdf8f6; padding: 16px; }
+
+.layout {
+  display: grid;
+  gap: 12px;
+  min-height: calc(100vh - 32px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.layout > * {
+  padding: 10px;
+  font-size: .85rem;
+  color: #444;
+  background: #fff;
+  border: 2px solid #ff5f45;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+.main { min-height: 240px; }
